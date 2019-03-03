@@ -1,0 +1,4 @@
+<textures>
+	<texture folder="tilesets"   name="tileset"/>
+	<texture folder="characters" name="player"/>
+</textures>
