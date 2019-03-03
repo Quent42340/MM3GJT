@@ -33,7 +33,7 @@ doc/latex
 
 # Binaries
 *.exe
-darktower
+game
 
 # Misc
 *.zip

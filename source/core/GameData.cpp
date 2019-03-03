@@ -27,6 +27,13 @@ bool GameData::inTile(float x, float y, u16 tile) {
 }
 
 bool GameData::isPassable(float x, float y) {
-	return !inTile(x, y, 2) && !inTile(x, y, 48) && !inTile(x, y, 1) && !inTile(x, y, 3) && !inTile(x, y, 52);
+	for (u8 i = 0 ; i < currentMap->layerCount() ; ++i) {
+		u16 tile = currentMap->getTile(x / currentMap->tileset().tileWidth(),
+		                               y / currentMap->tileset().tileHeight(), i);
+		if (currentMap->tileset().getTile(tile).type() == 1)
+			return false;
+	}
+
+	return true;
 }
 

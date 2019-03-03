@@ -30,8 +30,8 @@
 gk::SceneObject PlayerFactory::create(u16 x, u16 y) {
 	gk::SceneObject object;
 	object.set<gk::PositionComponent>(x, y);
-	object.set<gk::HitboxComponent>(14, 7, 19, 29);
-	object.set<gk::MovementComponent>(new GamePadMovement).speed = 0.8f;
+	object.set<gk::HitboxComponent>(12, 14, 9, 18);
+	object.set<gk::MovementComponent>(new GamePadMovement).speed = 0.6f;
 
 	auto &spriteComponent = object.set<SpriteComponent>("sprite-characters-player");
 	spriteComponent.setState("Standing", object);
